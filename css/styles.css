@@ -1,0 +1,363 @@
+/*
+** Fonts
+** ----------------------------------------------------------------------
+** All the fonts user are located in the same web server as the 
+** homepage
+*/
+
+@font-face {
+   font-family: 'Montserrat';
+   src: url(../fonts/Montserrat.ttf);
+}
+@font-face {
+   font-family: 'DancingScript';
+   src: url(../fonts/DancingScript.ttf);
+}
+@font-face {
+   font-family: 'Quirlycues';
+   src: url(../fonts/Quirlycues.ttf);
+}
+
+/*
+** Base style
+** ----------------------------------------------------------------------
+** clearing pressets
+** changing the color of the anchor tag
+*/
+
+body {
+  background-color: #a54c9f;
+  color: #666;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.50;
+  overflow-x: hidden;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+ol, ul {
+  list-style: none;
+}
+.vertical-align {
+  display: flex;
+  align-items: center;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a:link {
+  color: #a54c9f;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: #a54c9f;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: #a54c9f;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: #a54c9f;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+/*
+** Fade in the whole page
+** ----------------------------------------------------------------------
+** only once at page load
+*/
+
+#splash {
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 42;
+}
+
+/*
+** Page header
+** ----------------------------------------------------------------------
+** This comes outside the container from bootstrap, so it is so wide
+** as the browser is. That is why the banner occupies the whole browser
+** width. We are using a different font here.
+** The section id is named logp
+** This applies to every html file.
+*/
+
+#logo {
+  width: 100%;
+  min-height: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image:
+    radial-gradient(rgba(120, 0, 120, 0.15),
+    rgba(120, 0, 120, 0.75)),
+    url("../images/banner.jpg");
+}
+#logo img {
+  height: 100px;
+  width: auto;
+  margin-top: 23px;
+}
+#logo h1 {
+  font-family: 'Quirlycues';
+  font-size: 65px;
+  font-weight: normal;
+  padding-top: 23px;
+  color: #f9f9f9;
+}
+
+
+/*
+** List of recipes
+** ----------------------------------------------------------------------
+** This applies to the list of recipes, with pictures, in the file
+** index.html
+** the section id is named items
+** each recipe with picture is located inside a div tag with class 
+** named recipe-item
+*/
+
+#items {
+  background-color: #f1f1f1;
+  padding-top: 13px;
+  padding-bottom: 25px;
+}
+#items h2 {
+  color: #333;
+  font-family: 'DancingScript', cursive;
+  font-size: 2em;
+  margin-bottom: 13px;
+}
+#items h3 {
+  margin-top: 13px;
+  font-size: 1.2em;
+  color: #666;
+}
+.recipe-item {
+  margin-bottom: 25px;
+  padding-bottom: 13px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.15);
+  -moz-box-shadow: 0 1px 0 rgba(0,0,0,.15);
+  box-shadow: 0 1px 0 rgba(0,0,0,.15);
+}
+.recipe-item img {
+  width: 100%;
+  height: auto;
+}
+
+/*
+** Recipe Section
+** ----------------------------------------------------------------------
+** The section id name is recipe
+** the div tags for the individual html files, one for each recipe
+** have class names: recipe-picture, recipe-info, .recipe-ingredients
+** and recipe-directions.
+** The tags dt and dd make the formatting of the two columns of the
+** ingredients list
+** for the preparation steps the tags ol and li are user. li is also a 
+** counter for the preparation steps
+*/
+
+#recipe {
+  background-color: #f1f1f1;
+  padding-top: 13px;
+  padding-bottom: 25px;
+}
+#recipe h2 {
+  color: #333;
+  font-family: 'DancingScript', cursive;
+  font-size: 2em;
+  margin-bottom: 25px;
+  margin-top: 13px;
+}
+#recipe h3 {
+  background-color: #f1f1f1;
+  margin-top: 25px;
+}
+/* format the picture */
+.recipe-picture {
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 25px;
+  margin-top: 6px;
+  box-shadow:
+    0px 0px 0px 2px rgba(0,0,0,0.6),
+    0px 0px 0px 14px #fff,
+    0px 0px 0px 18px rgba(0,0,0,0.2),
+    6px 6px 8px 17px #555;
+  -webkit-box-shadow:
+    0px 0px 0px 2px rgba(0,0,0,0.6),
+    0px 0px 0px 14px #fff,
+    0px 0px 0px 18px rgba(0,0,0,0.2),
+    6px 6px 8px 17px #555;
+  -moz-box-shadow:
+    0px 0px 0px 2px rgba(0,0,0,0.6),
+    0px 0px 0px 14px #fff,
+    0px 0px 0px 18px rgba(0,0,0,0.2),
+    6px 6px 8px 17px #555;
+}
+/* format the info section */
+.recipe-info .row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-top: 13px;
+  background-color: #f9f9f9;
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.15);
+  -moz-box-shadow: 0 1px 0 rgba(0,0,0,.15);
+  box-shadow: 0 1px 0 rgba(0,0,0,.15);
+}
+/* for the icons in the info section */
+.recipe-info i {
+  color: #a54c9f;
+}
+.recipe-ingredients {
+  background-color: #f9f9f9;
+  margin-top: 25px;
+}
+/* for the ingredients list */
+.ingredients-list dl {
+  display: inline-block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+/* first column of the ingredients list */
+.ingredients-list dt {
+  width: 10%;
+  float: left;
+  margin: 0 0 8px;
+  padding: 0 10px;
+  font-size: 13px;
+  line-height: 37px;
+  background: #f9f9f9;
+  box-shadow: 0 1px 0 rgba(0,0,0,.15);
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.15);
+  -moz-box-shadow: 0 1px 0 rgba(0,0,0,.15);
+}
+/* second column of the ingredients list */
+.ingredients-list dd {
+  width: 90%;
+  float: left;
+  margin: 0 0 8px;
+  padding: 0 15px;
+  font-size: 13px;
+  line-height: 37px;
+  font-weight: 600;
+  background: #a54c9f;
+  color: #f9f9f9;
+  box-shadow: 0 1px 0 rgba(0,0,0,.15);
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.15);
+  -moz-box-shadow: 0 1px 0 rgba(0,0,0,.15);
+}
+/* preparation */
+.recipe-directions ol {
+    counter-reset: li;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 4em;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+.recipe-directions ol ol {
+    margin: 0 0 0 2em;
+}
+/* for the lines in the preparation steps */
+/* before, at the line, and after it */
+.recipe-directions li:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -2.5em;
+    top: 50%;
+    margin-top: -1em;
+    background: #a54c9f;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-weight: bold;
+    color: #f9f9f9;
+}
+.recipe-directions li {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em .8em;
+    *padding: .4em;
+    margin: .5em 0 .5em 2.5em;
+    background: #f9f9f9;
+    color: #222;
+    text-decoration: none;
+    transition: all .3s ease-out;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.15);
+    -moz-box-shadow: 0 1px 0 rgba(0,0,0,.15);
+    box-shadow: 0 1px 0 rgba(0,0,0,.15);
+}
+.recipe-directions li:after{
+    position: absolute;
+    content: '';
+    border: .5em solid transparent;
+    left: -1em;
+    top: 50%;
+    margin-top: -.5em;
+    transition: all .3s ease-out;
+}
+/* animation by hovering */
+.recipe-directions li:hover{
+    background: #f1f1f1;
+}
+.recipe-directions li:hover:after{
+    left: -.5em;
+    border-left-color: #a54c9f;
+}
+
+/*
+** Page Footer
+** ----------------------------------------------------------------------
+** Section id is named footer
+** the tags with class names footer-about and footer-author are 
+** user for the columns.
+** this applies to every html file.
+*/
+
+footer {
+  background-color: #a54c9f;
+  color: #f9f9f9;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+.footer-about {
+  margin-bottom: 25px;
+  font-style: italic;
+}
+.footer-author {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>My Recipes</title>
+
+  <!-- Favicon
+       ======= 
+       converted and modified from the logo 022-12.eps on the images folder
+       the logo is available for free in the internet:
+       https://www.vecteezy.com/vector-art/623582-hat-chef-logo-and-symbols-vector-template
+  -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
+  <link rel="icon" type="image/png" href="images/favicon/favicon.png">
+
+  <!-- CSS files
+       ========= 
+       reset.css used to clear pressets
+       bootstrap.css used to format the grid structure of the page
+       font-awesome contains the icons used in this project
+       animate.css is used to make the animations
+       styles.css is my css file
+      -->
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"  />
+  <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+</head>
+
+<body>
+  <!-- Splash Screen
+       ============= 
+       see splash section in styles.css    
+  -->
+  <div id="splash"></div>
+
+  <!-- Website Logo
+       ============ 
+      includes the logo and the text on the page header
+      converted and modified from the logo 022-12.eps on the images folder
+      the logo is available for free in the internet:
+      https://www.vecteezy.com/vector-art/623582-hat-chef-logo-and-symbols-vector-template
+      the banner is included in the styles.css file
+  -->
+  <section id="logo">
+    <div class="container text-center wow pulse">
+      <img src="images/logo-white.svg" alt="logo" />
+      <br />
+      <h1>My Recipes</h1>
+    </div>
+  </section>
+
+  <!-- List of Recipes
+       ===============
+       The is a bootstrap row for the subtitle and another for
+       the recipe items. For the recipe items we use 
+       12/4=3 columns for large devices,
+       12/6=2 for medium devices and 
+       12/12=1 for small devices.
+       fadeIn is the animation from animate.css
+       and wow is a java script library for revealing the animation
+       only when they scroll in the visible area of the browser.
+
+  -->
+  <section id="items">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>Recipes</h2>
+        </div>
+      </div>
+      <div class="row">
+        <!-- First recipe item -->
+        <div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn">
+          <div class="recipe-item text-center">
+            <a href="Nudelsalat.html">
+			  <!-- From the first issue of the TK magazine 2021.  -->
+              <img src="images/Nudelsalat.jpg" alt="Nudelsalat" />
+            </a>
+            <br />
+			<!-- From the first issue of the TK magazine 2021.  -->
+            <h3>Warm Pasta Salad</h3>
+          </div>
+        </div>
+        <!-- Second recipe item -->
+        <div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn">
+          <div class="recipe-item text-center">
+            <a href="Nicecream.html">
+			  <!-- From the first issue of the TK magazine 2021.  -->
+              <img src="images/Nicecream.jpg" alt="Nicecream" />
+            </a>
+            <br />
+			<!-- From the first issue of the TK magazine 2021.  -->
+            <h3>Coconut-Raspberries Nicecream</h3>
+          </div>
+        </div>
+         <!-- Third recipe item -->
+        <div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn">
+          <div class="recipe-item text-center">
+            <a href="Spaghetti.html">
+			  <!-- Self taken.  -->
+              <img src="images/Spaghetti.jpg" alt="Spaghetti" />
+            </a>
+            <br />
+			<!-- Own recipe.  -->
+            <h3>Spaghetti with Pesto</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Website Footer
+       ============== 
+  -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <!-- About -->
+        <!-- 2 or 1 columns, acording to device width -->
+        <div class="col-md-6 col-sm-12 text-center">
+          <h3>About</h3>
+          <div class="footer-about">
+            "A recipe book is one that you write once, and never
+             open again.”
+          </div>
+        </div>
+        <!-- Author -->
+        <!-- 2 or 1 columns, acording to devce width -->
+        <div class="col-md-6 col-sm-12 text-center">
+          <div class="footer-author">
+            Made with
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            love by Lena & Frederico.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript files
+       ================
+       jquery.js is needed for bootstrap.js
+       bootstrap.js is used togheter with bootstrap.css for formatting
+       wow.js is user to reveal animations only when the scroll in
+       scripts.js is my javascript file
+  -->
+  <script charset="utf-8" src="js/jquery-3.3.1.min.js"></script>
+  <script charset="utf-8" src="js/bootstrap.min.js"></script>
+  <script charset="utf-8" src="js/wow.min.js"></script>
+  <script charset="utf-8" src="js/scripts.js"></script>
+</body>
+
+</html>
